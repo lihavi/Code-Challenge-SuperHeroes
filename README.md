@@ -13,6 +13,36 @@ rails db:seed
 
 rails s
 
+## Models
+# Hero
+ * id (integer)
+ * name (string)
+ * super_name (string)
+*  A Hero has many Powers through HeroPower.
+
+# Power
+* id (integer)
+* name (string)
+* description (text)
+* A Power has many Heros through HeroPower.
+
+# HeroPower
+* id (integer)
+* strength (string)
+* hero_id (integer)
+* power_id (integer)
+* HeroPower belongs to a Hero and belongs to a Power.
+
+# Validations
+Add validations to the HeroPower model:
+
+* strength must be one of the following values: 'Strong', 'Weak', 'Average'
+
+Add validations to the Power model:
+
+* description must be present and at least 20 characters long
+
+
 
 ## API Endpoints
 The following API endpoints are available:
@@ -51,11 +81,11 @@ Returns a JSON object with information about a specific hero, including their as
     },
   ]
 }
-
+```
 ## GET /powers 
 
 Returns a JSON array of all powers in the database, in the following format:
-``
+```
 [
   {
     "id": 1,
@@ -69,41 +99,36 @@ Returns a JSON array of all powers in the database, in the following format:
   }
 ]
 
- ##  POST /hero_powers
-Returns a JSON object with information about a specific power, in the following format:
-``
-[
+ GET /powers/:id
+Returns JSON data in the format below:
+
 {
   "id": 1,
   "name": "super strength",
   "description": "gives the wielder super-human strengths"
 }
-]
 
-##  PATCH /powers/:id
-This route should update an existing `Power`
+ PATCH /powers/:id
 
-If the `Power` exists and is updated successfully (passes validations), update
-its description and return JSON data in the format below:
-```
-[
+This route should update an existing `Power` .Returns JSON data in the format below:
+
 {
   "id": 1,
   "name": "super strength",
   "description": "Updated description"
 }
-
-]
-
+```
+ 
  ## POST /hero_powers
 Creates a new hero power (a join between a hero and a power) in the database. Expects a JSON object with the following properties in the request body:
 
+```
 {
   "strength": "Average",
   "power_id": 1,
   "hero_id": 3
 }
-
+```
 
 
 
