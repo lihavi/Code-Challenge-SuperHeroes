@@ -60,7 +60,7 @@ Returns a JSON array of all heroes in the database, in the following format:
 
 ]
 
-## GET /heroes/:id
+ GET /heroes/:id
 
 Returns a JSON object with information about a specific hero, including their associated powers, in the following format:
 
