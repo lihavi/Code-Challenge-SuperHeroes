@@ -93,6 +93,8 @@ Returns a JSON array of all powers in the database, in the following format:
 Here is the live link https://super-heroes-r32i.onrender.com/powers- To view all powers
 
 Here is the live link https://super-heroes-r32i.onrender.com/powers/1-To view powers by id
+
+
 ```
 [
   {
@@ -117,6 +119,8 @@ Returns JSON data in the format below:
 }
 
  PATCH /powers/:id
+ 
+ Here is the live link https://super-heroes-r32i.onrender.com/powers/1
 
 This route should update an existing `Power` .Returns JSON data in the format below:
 
