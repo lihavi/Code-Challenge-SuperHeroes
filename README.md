@@ -94,6 +94,7 @@ Here is the live link https://super-heroes-r32i.onrender.com/powers- To view all
 
 Here is the live link https://super-heroes-r32i.onrender.com/powers/1-To view powers by id
 
+Here is the live link https://super-heroes-r32i.onrender.com/powers/2-For the PATCH /powers/:id
 
 ```
 [
@@ -117,10 +118,6 @@ Returns JSON data in the format below:
   "name": "super strength",
   "description": "gives the wielder super-human strengths"
 }
-
- PATCH /powers/:id
- 
- Here is the live link https://super-heroes-r32i.onrender.com/powers/1
 
 This route should update an existing `Power` .Returns JSON data in the format below:
 
