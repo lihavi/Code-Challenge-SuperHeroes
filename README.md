@@ -130,5 +130,10 @@ Creates a new hero power (a join between a hero and a power) in the database. Ex
 }
 ```
 
+## Author
+Vivian Njoroge
+
+## LICENSE
+This project is licensed under the license Apache License, Version 2.0 (the "License");
 
 

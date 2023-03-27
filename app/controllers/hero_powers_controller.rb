@@ -4,7 +4,7 @@ class HeroPowersController < ApplicationController
     def create
         hero_power=HeroPower.create!(hero_powers_params)
         if hero_power
-            hero=Hero.find(params[:hero_id])
+            hero = Hero.find(params[:hero_id])
             render json: hero,include: ['powers'], status: :created
         end
     end
@@ -13,7 +13,7 @@ class HeroPowersController < ApplicationController
     
     def hero_powers_params
         params.permit(:strength, :power_id, :hero_id)
-    end
+    end 
 
     def rescue_from_record_invalid(invalid)
         render json: {errors:invalid.record.errors.full_messages},status: :unprocessable_entity
