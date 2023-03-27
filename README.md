@@ -49,7 +49,9 @@ The following API endpoints are available:
 
 ## GET /heroes
 Here is the live link https://super-heroes-r32i.onrender.com/heroes-To view all heroes
+
 Here is the live link https://super-heroes-r32i.onrender.com/heroes/2-To view heroes by id
+
 Returns a JSON array of all heroes in the database, in the following format:
 ```
 [  
@@ -89,6 +91,7 @@ Returns a JSON object with information about a specific hero, including their as
 Returns a JSON array of all powers in the database, in the following format:
 
 Here is the live link https://super-heroes-r32i.onrender.com/powers- To view all powers
+
 Here is the live link https://super-heroes-r32i.onrender.com/powers/1-To view powers by id
 ```
 [
